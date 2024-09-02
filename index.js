@@ -72,4 +72,8 @@ app.use('/bookings', require('./routes/bookingsRoute'))
 app.get('/', (req, res) => {
   res.send("Hello World")
 })
+
+app.get("/health", (req, res) => {
+  res.send("Service is up and running..");
+});
 app.listen(port, () => console.log(`server is running at ${port}`));
